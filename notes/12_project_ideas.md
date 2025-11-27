@@ -296,7 +296,7 @@ impl Borrowable for Book {
             BookStatus::Available => {
                 self.status = BookStatus::CheckedOut {
                     borrower: borrower.to_string(),
-                    due_date: String::from("2024-01-15"),
+                    due_date: String::from("in 14 days"), // Placeholder for due date
                 };
                 Ok(())
             }
@@ -552,7 +552,7 @@ These projects will require learning additional Rust concepts:
 After completing some projects, consider learning:
 
 1. **Lifetimes** — Memory safety without garbage collection
-2. **Error handling** — `?` operator, custom error types
+2. **Advanced error handling** — Custom error types, `thiserror`, `anyhow`
 3. **Iterators** — `.map()`, `.filter()`, `.fold()`, etc.
 4. **Collections** — HashMap, HashSet, BTreeMap
 5. **Modules & Crates** — Organizing larger projects
