@@ -36,12 +36,12 @@ impl Shape {
 }
 
 fn main() {
-    let circle = Shape::Circle { radius: 5.0 };
-    let rectangle = Shape::Rectangle {
+    let circle: Shape = Shape::Circle { radius: 5.0 };
+    let rectangle: Shape = Shape::Rectangle {
         width: 10.0,
         height: 5.0,
     };
-    let square = Shape::square(7.0); // Using our associated function
+    let square: Shape = Shape::square(7.0); // Using our associated function
 
     circle.describe();
     println!("Area: {}\n", circle.area());
