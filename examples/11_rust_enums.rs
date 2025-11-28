@@ -42,6 +42,10 @@ fn main() {
         height: 5.0,
     };
     let square: Shape = Shape::square(7.0); // Using our associated function
+    let triangle: Shape = Shape::Triangle {
+        base: (6.),
+        height: (12.),
+    };
 
     circle.describe();
     println!("Area: {}\n", circle.area());
@@ -51,4 +55,7 @@ fn main() {
 
     square.describe();
     println!("Area: {}", square.area());
+
+    triangle.describe();
+    println!("Area: {}", triangle.area());
 }
